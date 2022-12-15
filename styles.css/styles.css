@@ -10,9 +10,10 @@
 }
 
 body{
-
     display: grid;
-    grid-template-rows: 6% 94%;
+    grid-template-rows: 8% 92%;
+    height: 100vh;
+    width: 100vw;
 }
 
 body a{
@@ -45,7 +46,7 @@ body a{
     display: flex;
     padding-left: 20px;
     z-index: 30;
-    margin-top: 25px;
+    
 }
 
 .nav div{
@@ -58,6 +59,10 @@ body a{
 .bar-container button{
     background-color: transparent;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .bar-img{
@@ -74,13 +79,14 @@ body a{
 /* ---------- */
 
 .search-container{
-    width: 800px;
+    width: 600px;
     display: flex;
+    margin-left: 80px;
 }
 
 .search-box input{
     width: 500px;
-    height: 37px;
+    height: 40px;
     color: #fff;
     background-color: rgb(18,19,19);
     border: 1px solid rgb(49,48,49);
@@ -104,7 +110,7 @@ body a{
 .search{
     background-color: rgb(35,34,35);
     width: 60px;
-    height: 37px;
+    height: 40px;
     border: 1px solid rgb(49,48,49);
     border-radius: 0 30px 30px 0;
 }
@@ -135,6 +141,7 @@ body a{
 
 .mic img{
     width: 35px;
+    background-color: transparent;
 }
 
 /* ---------- */
@@ -195,7 +202,6 @@ body a{
 .main{
     display: grid;
     grid-template-columns: 4% 96%;
-    margin-top: 50px;
 }
 
 /* SIDEBAR (aside) */
@@ -203,9 +209,22 @@ body a{
 .aside{
     font-size: .6rem;
     height: 100%;
-    padding-top: 50px;
+    margin-top: 7px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
+.aside div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside img,p{
+    background-color: transparent;
+}
 
 /* ---------- */
 
@@ -265,12 +284,19 @@ body a{
     color: #fff;
     background-color: rgb(14,15,14);
     display: flex; 
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.categories-container div{
+    margin-right: 12px;
 }
 
 /* ---------- */
 
 .category{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     height: 30px;
@@ -294,6 +320,8 @@ body a{
 /* ---------- */
 
 #todo{
+    margin-left: 20px;
+    margin-right: 12px;
     background-color: #fff;
 }
 
