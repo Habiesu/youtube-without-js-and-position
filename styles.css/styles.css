@@ -11,7 +11,7 @@
 
 body{
     display: grid;
-    grid-template-rows: 8% 92%;
+    grid-template-rows: 1fr 1fr;
     height: 100%;
     width: 100%;
     position: relative;
@@ -51,8 +51,8 @@ body a{
     justify-content: space-between;
     width: 100%;
     height: 56px;
-    padding: 0 30px;
-}
+    padding: 0 16px;
+}   
 
 /* ---------- */
 
@@ -65,7 +65,10 @@ body a{
 /* ----------- */
 
 .bar-container{
-    width: 35px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bar-container button{
@@ -80,7 +83,6 @@ body a{
 
 .bar-container:hover{
     background-color: rgb(49,48,49);
-    
 }
 
 /* ---------- */
@@ -108,41 +110,78 @@ body a{
 
 .search-container{
     display: flex;
-    align-items: center;
     justify-content: center;
-    min-width: 300px;
-}
-
-.search-container div{
-    display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.search-box input{
-    width: 500px;
+    width: 728px;
     height: 40px;
-    color: #fff;
+
+}
+
+.search-form{
+    /* width: 572px; Recordar que al estar al maximo de la pantalla esta es la medida*/
+    height: 40px;
     background-color: rgb(18,19,19);
     border: 1px solid rgb(49,48,49);
-    padding-left: 18px;
     border-radius: 30px 0 0 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 0 4px 0 16px;
+    margin: 0 0 0 32px;
 }
 
-.search-box input::placeholder{
+.search-form button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.search-form button:hover{
+    background-color: #202020;
+    border-radius: 30px;
+}
+
+#search-x{
+    fill: #fff;
+    background-color: transparent;
+}
+
+.search-container input{
+    /* width: 495px; Recordar que al estar al maximo de la pantalla esta es la medida */
+    height: 26px;
+    border: none;
+    background-color: transparent;
+}
+
+.search-container input::placeholder{
     font-size: 1rem;
 }
 
-.search-box input:focus{
+.search-container input:focus{
     border-color: rgba(0, 132, 255, 0.6);
     outline: 0 none;
 }
 
-.search-box form{
-    width: 500px;
+.search-container form{
+    width: auto;
+}
+
+@media screen and (max-width: 499px){
+    .search-box form, button{
+        display: none;
+    }
+    .search{
+        display: flex;
+        border-radius: 30px 30px 30px 30px;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .search-box form,input{
+        width: 80px;
+    }
 }
 
 .search{
@@ -155,7 +194,7 @@ body a{
 
 .search img{
     background-color: transparent;
-    width: 50px;
+    width: 24px;
 }
 
 .search img:hover{
@@ -184,6 +223,33 @@ body a{
 
 /* ---------- */
 
+.search-mini{
+    /* Recordar hacer que aparezca en resoluciones bajas */
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.search-mini:hover{
+    background-color: #272727;
+    width: 30px;
+    height: 30px;
+}
+
+.search-mini img{
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+
+/* ---------- */
+
 .user-container{
     gap: 20px;
     display: flex;
@@ -193,10 +259,18 @@ body a{
 
 /* ---------- */
 
-.upload{
+.upload-container{
     width: 40px;
     height: 40px;
-    padding-left: 3px;
+    
+}
+
+.upload{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .upload:hover{
@@ -206,13 +280,20 @@ body a{
 
 .upload img{
     width: 28px;
+    background-color: transparent;
 }
 
 /* ---------- */
 
+.notification-container{
+    height: 100%;
+}
+
 .notification{
-    width: 40px;
-    height: 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .notification:hover{
@@ -223,6 +304,7 @@ body a{
 
 .notification img{
     width: 30px;
+    background-color: transparent;
 }
 
 /* ---------- */
@@ -230,6 +312,9 @@ body a{
 .profile{
     width: 40px;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .profile img{
