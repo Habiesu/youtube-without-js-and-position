@@ -50,7 +50,7 @@ body a{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 6%;
+    height: 56px;
     padding: 0 30px;
 }
 
@@ -334,9 +334,8 @@ body a{
     height: 60px;
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 40px;
-    left: 60px;
+    
+    z-index: 100;
 }
 
 .categories-container div{
