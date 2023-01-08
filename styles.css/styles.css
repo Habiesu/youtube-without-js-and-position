@@ -91,20 +91,23 @@ body a{
     display: flex;
     font-size:x-small;
     align-items: center;
+    padding-left: 20px;
+}
+
+.logo-container a{
+    display: flex;
+    gap: 4px;
 }
 
 .logo-img{
-    width: 80px;
+    width: 95px;
     z-index: 10;
 }
 
 .country-code{
     color: #aaa;
-    position: absolute;
-    
+    font-size: 9px;
 }
-
-
 
 /* ---------- */
 
@@ -112,33 +115,22 @@ body a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 728px;
+    width: 100%;
+    max-width: 540px;
     height: 40px;
-
 }
 
-.search-form{
-    /* width: 572px; Recordar que al estar al maximo de la pantalla esta es la medida*/
-    height: 40px;
-    background-color: rgb(18,19,19);
-    border: 1px solid rgb(49,48,49);
-    border-radius: 30px 0 0 30px;
-    display: flex;
-    align-items: center;
-    padding: 0 4px 0 16px;
-    margin: 0 0 0 32px;
-}
-
-.search-form button{
+.search-div button{
     width: 40px;
     height: 40px;
     border: none;
     background-color: transparent;
     padding: 7px;
     cursor: pointer;
+    display: none;
 }
 
-.search-form button:hover{
+.search-div button:hover{
     background-color: #202020;
     border-radius: 30px;
 }
@@ -148,11 +140,17 @@ body a{
     background-color: transparent;
 }
 
+
 .search-container input{
     /* width: 495px; Recordar que al estar al maximo de la pantalla esta es la medida */
-    height: 26px;
-    border: none;
-    background-color: transparent;
+    height: 40px;
+    background-color: rgb(18,19,19);
+    border: 1px solid rgb(49,48,49);
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px 0 16px;
+    margin: 0 0 0 32px;
 }
 
 .search-container input::placeholder{
@@ -164,12 +162,9 @@ body a{
     outline: 0 none;
 }
 
-.search-container form{
-    width: auto;
-}
 
-@media screen and (max-width: 499px){
-    .search-box form, button{
+@media only screen and (max-width: 499px){
+    .search-div input, button{
         display: none;
     }
     .search{
@@ -178,11 +173,17 @@ body a{
     }
 }
 
-@media screen and (min-width: 500px){
-    .search-box form,input{
-        width: 80px;
+@media only screen and (max-width: 1200px){
+    .search-div input{
+        
+        
     }
 }
+
+
+
+
+
 
 .search{
     background-color: rgb(35,34,35);
@@ -190,11 +191,15 @@ body a{
     height: 40px;
     border: 1px solid rgb(49,48,49);
     border-radius: 0 30px 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .search img{
     background-color: transparent;
-    width: 24px;
+    width: 20px;
 }
 
 .search img:hover{
@@ -209,6 +214,7 @@ body a{
     border: none;
     height: 40px;
     width: 40px;
+    margin-left: 8px;
 }
 
 .mic:hover{
@@ -327,7 +333,7 @@ body a{
 .main{
     display: grid;
     grid-template-columns: 4% 96%;
-    position: absolute;
+    
 }
 
 /* SIDEBAR */
